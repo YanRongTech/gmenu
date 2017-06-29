@@ -1,0 +1,133 @@
+.g-menu {
+  display: inline;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .g-menu-btn {
+    display: inline-block;
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 60px;
+    text-decoration: none;
+
+    .ant-select-arrow {
+      position: relative;
+      margin-left: 10px;
+    }
+
+    &.active .ant-select-arrow:before {
+      transform: rotate(180deg);
+    }
+
+    &.active, &.active:hover {
+      background-color: #e8e8e8;
+      color: #333;
+    }
+
+    &:hover {
+      background-color: #e8e8e8;
+    }
+  }
+
+  .g-menu-bg {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .g-menu-container {
+    font-size: 12px;
+    color: #333;
+    background-color: #fff;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    min-height: 200px;
+    border-bottom: 1px solid #e8e8e8;
+    box-shadow: 0 10px 20px rgba(200, 200, 200, 0.1);
+    z-index: 200;
+  }
+
+  .g-menu-list-container {
+    margin-left: 20px;
+    padding: 20px 0;
+    float: left;
+    height: 100%;
+    width: 180px;
+    border-right: 1px solid #e8e8e8;
+  }
+
+  .g-menu-sub-container {
+    margin-left: 200px;
+  }
+
+  .g-menu-sub-container:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  .g-menu-sub-group {
+    padding: 20px;
+    width: 33%;
+    float: left;
+    box-sizing: border-box;
+  }
+
+  li.g-menu-item {
+    display: block;
+    padding: 10px;
+    width: 160px;
+    cursor: pointer;
+
+    &.active {
+      background: rgb(16, 142, 233);
+      color: #fff;
+    }
+  }
+
+  .g-menu-sub-item {
+    text-align: left;
+
+    a {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .g-menu-sub-item-name {
+      font-size: 14px;
+    }
+
+    .g-menu-sub-item-desc {
+      color: #999;
+    }
+
+    &:hover {
+      background: rgb(16, 142, 233);
+      color: #fff;
+    }
+
+    &:hover a, &:hover .g-menu-sub-item-desc {
+      color: #fff;
+    }
+  }
+}
